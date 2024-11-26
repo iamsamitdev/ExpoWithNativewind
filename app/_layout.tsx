@@ -7,8 +7,21 @@ import "../global.css";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{title:'Home', headerTitleAlign: 'center', headerShown: false}} />
+    <Stack screenOptions={{
+      headerStyle: {
+        backgroundColor: '#12833f',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+      <Stack.Screen name="index" options={{
+        title:'Home', headerTitleAlign: 'center', headerShown: true
+      }} />
+      <Stack.Screen name="about" options={{
+        title:'About', headerTitleAlign: 'center', headerShown: true
+      }} />
     </Stack>
   )
 }
