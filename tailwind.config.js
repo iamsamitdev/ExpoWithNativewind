@@ -4,7 +4,16 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        '30': '30deg',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      rotate: ['responsive', 'hover', 'focus'],
+    },
   },
   plugins: [],
 }
